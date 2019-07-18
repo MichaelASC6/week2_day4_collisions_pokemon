@@ -16,7 +16,7 @@ let points = 0;
 
 let clefairy;
 let togepi;
-
+let backdrop;
 
 function setup() {
     createCanvas(500, 500);
@@ -25,7 +25,10 @@ function setup() {
 
     // switch rectMode
     rectMode(CENTER); // the origin will be the center not the corner
-    
+    imageMode(CENTER);
+
+
+
     // determine the random position of the enemy
     enemyPosX = random(25, 475);
     enemyPosY = random(100, 475);
@@ -33,12 +36,13 @@ function setup() {
     // load in images
     clefairy = loadImage("clefairy.png");
     togepi = loadImage("togepi.png");
+    backdrop = loadImage("starwars_PNG56.png")
+
 }
 
 function draw() {
-    
-    background(0);
-    
+
+    image(backdrop, width/2, heigth/2, width, heigth);
     // draw the togapi enemy
     image(togepi, enemyPosX, enemyPosY, enemyWidth, enemyHeight);
 
