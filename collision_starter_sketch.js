@@ -41,7 +41,8 @@ function setup() {
 }
 
 function draw() {
-
+    
+    background(0);
     image(backdrop, width/2, height/2, width, height);
     // draw the togapi enemy
     image(togepi, enemyPosX, enemyPosY, enemyWidth, enemyHeight);
