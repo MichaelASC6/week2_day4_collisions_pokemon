@@ -118,6 +118,13 @@ function draw() {
 
         enemyPosY = random(25, 475);
         enemyPosX = random(25, 475);
+
+        if(points >= 5) {
+        
+            background(0);
+            text("GAME OVER", 110, 250);
+            noLoop();
+       }
     }
 
     fill(255);
